@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+      <meta charset="UTF-8">
+    <title>Authentication Practice</title>
+
+
+  </head>
+
+  <body>
+   
+    <div class='content'>Auth Home Page</div>
+
+    <% if (user) { %>
+    <h1>Welcome Back <%=user.username%></h1>
+    <a href="/logOut">Log Out</a>
+    <% } else { %>
+        <h1>Please Log In:</h1>
+        <form action="/logIn" method="POST">
+            <label for="username">Username:</label>
+            <input name="username" placeholder="username here" type="text">
+            <label for="password">Password:</label>
+            <input name="password" placeholder="password here" type="password">
+            <button>Log In</button>
+        </form>
+    <% }; %>
+
+
+
+ 
+
+  </body>
+</html>
